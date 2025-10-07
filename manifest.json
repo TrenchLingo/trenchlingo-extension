@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "TrenchLingo",
+    "version": "1.0.0",
+    "description": "Translates token names and tickers inside list rows to English and updates the UI in place.",
+    "permissions": ["storage"],
+    "host_permissions": [
+      "https://translate.googleapis.com/*",
+          "https://api.cognitive.microsofttranslator.com/*",
+    "https://*.cognitiveservices.azure.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://gmgn.ai/*", "https://uxento.io/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+      "32": "icon32.png"
+    }
+  }
+  
